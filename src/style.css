@@ -1,22 +1,87 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
 
+html {
+  height: 100%; /* esto junto con las especificaciones de body, para fijar el footer al fondo, sino, quedaba flotando, pero es más que nada legacy browsers*/
+}
+
 body {
-    margin: 0;
+    margin: 0; 
+    padding: 0;
+    height: 100%; 
     font-family: Poppins;
     background-color: #FFEBCD;
 }
 
+/*INICIO CONTENT*/
+.container {  
+    display: grid;
+    grid-template-columns: 50% 50%;  /*En lugar de frames para fr, para mejor control del área de trabajo*/
+    grid-template-rows: 25% 25% 25% 25%;
+
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "product-image product-title"
+      "product-image product-price"
+      "product-image product-description"
+      "product-delivery buttons";
+    position: relative;
+    margin:auto;
+  
+    width: 850px;
+    height: 550px;
+    background: #FFFFFF;
+    box-shadow: 5px 5px 15px rgba(69,82,85, 0.5);
+    border-radius: 10px;
+  }
+  
+  .product-image { 
+      grid-area: product-image; 
+  }
+
+.book-image {
+    max-width: 100%; /*100% en ambos para que la imagen ocupe todo el espacio en el grid*/
+    max-height: 100%;
+}
+
+  .product-delivery { 
+      grid-area: product-delivery; 
+      display:inline;
+    }
+  
+  .product-title { 
+      grid-area: product-title; 
+    }
+  
+  .product-price { 
+      grid-area: product-price;
+    }
+  
+  .product-description { 
+      grid-area: product-description; 
+    }
+  
+  .buttons { 
+      grid-area: buttons; 
+    }
+  
+/*FIN CONTENT*/
+
+/*INICIO FOOTER*/
+
 footer {
+    position: absolute; /*para fijar el footer al final del página*, junto con los ajustes de body y html de height 100%*/
+    bottom: 0;       
+    width: 100%;            
     background: #B38C9C;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .footer-content {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     text-align: center;
 }
 
@@ -25,27 +90,18 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: right;
+    /*float: left;*/
 }
 
 .instagram {
-    margin: 10px;
-    font-size: 30px;
-}
-
-.instagram :hover{
-    transition: all 0.5s;
-    background: #FFFFFF;
+    margin: 5px;
+    font-size: 20px; /*Para cambiar el tamaño de los íconos*/
 }
 
 .twitter {
-    margin: 10px;
-    font-size: 30px;
-    color:#FFFFFF;
-}
-
-.twitter :hover{
-    transition: all 0.5s;
-    background: #FFFFFF;
+    margin: 5px;
+    font-size: 20px;
 }
 
 .copyright {
@@ -54,7 +110,7 @@ footer {
     text-align: center;
     color: #FFFFFF
 }
-
+/*FIN FOOTER*/
 
 
 
