@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ccform.css" />
+</head>
+
+<body>
+    <header></header>
+    <main></main>
+
+    <!--CREDIT CARD FORM-->
+    <div class="form">
+        <div class="form-header">
+            <image src="logo.png" class="form-logo">
+                <h3 class="user-message">¡Estás a un paso de completar tu
+                    suscripción!</h3>
+        </div>
+        <div class="user-info1">
+            <label class="name-label">Nombre:</label>
+            <input required type="text" class="user-name" id="name" placeholder="Tu nombre">
+        </div>
+        <div class"user-info2>
+            <label class="lastname-label">Apellido:</label>
+            <input required type="text" class="user-lastname" id="lastname" placeholder="Tu apellido">
+        </div>
+        <div class="card-info">
+            <label class="label-card">Número Tarjeta de Crédito</label>
+            <input required type="text" class="card-number" id="card-number" placeholder="1234 1234 1234 1234"
+                data-mask="xxxx xxxx xxxx">
+            <i class="far fa-credit-card"></i>
+        </div>
+        <div class="security-info">
+            <div class="exp-info">
+                <label class="exp-label">Fecha Exp:</label>
+                <input required type="text" class="expiration-date" id="expiration-date" placeholder="MM/YY">
+            </div>
+            <div class="cvv-info">
+                <label class="code">CVV:</label>
+                <input required type="text" class="cvv" id="cvv" placeholder="XXX" data-mask="XXX">
+                <i class="fas fa-lock"></i>
+            </div>
+        </div>
+        <div class="payment">
+            <button class="btn-payment" onclick="payment()">Confirmar Pago</button>
+            <p class="confirmation-message">Estás confirmando que la información ingresada es válida</p>
+        </div>
+    </div>
+    <script src="index.js" type="module"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
+</body>
+
+</html>
