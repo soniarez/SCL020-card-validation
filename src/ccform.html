@@ -6,17 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="ccform.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
 </head>
 
 <body>
-    <header></header>
+    <header>
+        <div class="header-content">
+            <img class="logo" src="img/logo.png" alt="logo"> <!--img class permite modificar el tamaño de la imagen desde CSS-->
+            <div class="name-kitty">Kitty Readers</div> 
+            <button class="button-account" role="button">Tu cuenta</button> <!--el texto cambia el puntero del botón-->
+          </div>
+    </header>
     <main></main>
 
     <!--CREDIT CARD FORM-->
     <div class="form">
         <div class="form-header">
-            <image src="logo.png" class="form-logo">
+            <img class="form-logo" src="img/logo.png">
                 <h3 class="user-message">¡Estás a un paso de completar tu
                     suscripción!</h3>
         </div>
@@ -24,7 +31,7 @@
             <label class="name-label">Nombre:</label>
             <input required type="text" class="user-name" id="name" placeholder="Tu nombre">
         </div>
-        <div class"user-info2>
+        <div class="user-info2">
             <label class="lastname-label">Apellido:</label>
             <input required type="text" class="user-lastname" id="lastname" placeholder="Tu apellido">
         </div>
@@ -32,7 +39,7 @@
             <label class="label-card">Número Tarjeta de Crédito</label>
             <input required type="text" class="card-number" id="card-number" placeholder="1234 1234 1234 1234"
                 data-mask="xxxx xxxx xxxx">
-            <i class="far fa-credit-card"></i>
+          <!--//  <i class="far fa-credit-card"></i> -->
         </div>
         <div class="security-info">
             <div class="exp-info">
@@ -42,7 +49,7 @@
             <div class="cvv-info">
                 <label class="code">CVV:</label>
                 <input required type="text" class="cvv" id="cvv" placeholder="XXX" data-mask="XXX">
-                <i class="fas fa-lock"></i>
+             <!--   <i class="fas fa-lock"></i>-->
             </div>
         </div>
         <div class="payment">
@@ -50,8 +57,24 @@
             <p class="confirmation-message">Estás confirmando que la información ingresada es válida</p>
         </div>
     </div>
+
+    <footer>
+        <div class="footer-content">
+            <p class="copyright">©Copyright 2022, Kitty reads SpA. Todos los derechos reservados</p>
+            <ul class="social-media">
+            <li class="instagram"><a href="#">
+                <ion-icon name="logo-instagram" style="color:#FFFFFF"></ion-icon>
+              </a></li>
+            <li class="twitter" style="color:#FFFFFF"><a href="#">
+                <ion-icon name="logo-twitter" style="color:#FFFFFF"></ion-icon>
+              </a></li>
+          </ul>
+          
+        </div>
+      
     <script src="index.js" type="module"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
