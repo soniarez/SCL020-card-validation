@@ -19,6 +19,9 @@ const misMatematicas = {
     
   }; 
   
+  
+
+
   //console.log(misMatematicas.numeroUno)
   
   //misMatematicas.sumaDosNumeros(2,5);

@@ -37,6 +37,8 @@ const validator = {
     }
   },
 
+
+
   //Ouch! esto solo sirve para tarjetas de 16 dígitos
   /*luhnValidation: function (values) {
     for (let i = 0; i < values.length; i++) {
