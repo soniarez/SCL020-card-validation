@@ -10,6 +10,10 @@ let input = document.getElementById("card-number").value;
 validator.stringLenght(input); //esta es la estructura para objetos
 validator.isANumber(input);
 validator.luhnValidation(input);
+<<<<<<< HEAD
+=======
+validator.isValid(input);
+>>>>>>> versionsr2
 validator.maskify(input);
 }
 
@@ -22,6 +26,7 @@ function isANumber(evt) {
         evt.preventDefault();
     }
 } */ 
+
 
 
 
