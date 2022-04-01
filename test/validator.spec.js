@@ -11,16 +11,16 @@ describe('validator', () => {
       expect(typeof validator.isValid).toBe('function');
     });
 
-    it('debería retornar true para "4083952015263"', () => {
-      expect(validator.isValid('4083952015263')).toBe(true);
+    it('debería retornar true para "4137894711755904"', () => {
+      expect(validator.isValid('4137894711755904')).toBe(true);
     });
 
-    it('debería retornar true para "79927398713"', () => {
-      expect(validator.isValid('79927398713')).toBe(true);
+    it('debería retornar true para "4263982640269299"', () => {
+      expect(validator.isValid('4263982640269299')).toBe(true);
     });
 
-    it('debería retornar false para "1234567890"', () => {
-      expect(validator.isValid('1234567890')).toBe(false);
+    it('debería retornar false para "343280696646913"', () => {
+      expect(validator.isValid('343280696646913')).toBe(false);
     });
   });
 
