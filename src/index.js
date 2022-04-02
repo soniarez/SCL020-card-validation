@@ -10,13 +10,8 @@ let input = document.getElementById("card-number").value;
 validator.stringLenght(input); //esta es la estructura para objetos
 validator.isANumber(input);
 validator.luhnValidation(input);
-<<<<<<< HEAD
-=======
-validator.isValid(input);
->>>>>>> versionsr2
 validator.maskify(input);
 }
-
 
 //Para únicamente permitir ingresar valores numéricos:
 /* document.getElementById("card-number").addEventListener("keypress", isANumber(evt));
