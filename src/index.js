@@ -3,26 +3,29 @@ import validator from './validator.js';
 /*Formula para enmascarar datos tarjeta
 $("input[name='expiry-data']").mask("00 / 00"); */
 
+
+
+
 document.getElementById("pay").onclick = payment;
 
 function payment() {
+/*const inputFields = document.querySelectorAll("input");
+const validInputs = Array.from(inputFields).filter(input => input.value === "");
+alert("Debes completar todos los campos"); */ 
+
 let input = document.getElementById("card-number").value;
 validator.stringLenght(input); //esta es la estructura para objetos
 validator.isANumber(input);
 validator.luhnValidation(input);
 validator.isValid(input);
-validator.maskify(input);
+document.getElementById("card-number").value = validator.maskify(input);
+
+
+
 }
 
 
-//Para únicamente permitir ingresar valores numéricos:
-/* document.getElementById("card-number").addEventListener("keypress", isANumber(evt));
-function isANumber(evt) {
-    let ch = String.fromCharCode (evt.which);
-    if (!/[0,9]/.test(ch)) {
-        evt.preventDefault();
-    }
-} */ 
+
 
 
 

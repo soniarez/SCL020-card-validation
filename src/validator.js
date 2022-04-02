@@ -89,22 +89,21 @@ const validator = {
 
   maskify: function (creditCardNumber) {
     let lastFourDigits = creditCardNumber.slice(-4);
-    let firstDigits = creditCardNumber.slice(0,-4);
+    let firstDigits = creditCardNumber.slice(0, -4);
+    //console.log(firstDigits);
+    let newChar = "#"
+    firstDigits = newChar.repeat(firstDigits.length);
+    //console.log(firstDigits);
+
+    return firstDigits + lastFourDigits;
   },
-    
   //console.log(lastFourDigits);
 
 
   // ...
 };
 
-export default validator;
+export default validator; 
 
-/* Mi antigua funcion para validar que el valor ingresado es numérico/digits.
-   function (number) {
-    console.log(this.stringLenght(number));
-    if (isNaN(number) {
-      alert("Solo acepta números");
-      return true;
-    }
-  }, */
+
+
