@@ -7,7 +7,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
+  width: 100vw;
   height: auto;
   font-family: Poppins;
   background: #ffebcd;
@@ -17,7 +17,7 @@ body {
 header {
   position: absolute; /*Deja el header arriba*/
   display: block;
-  width: 100%;
+  width: 100vw;
   height: 74px;
   background: #b38c9c;
   top: 0px;

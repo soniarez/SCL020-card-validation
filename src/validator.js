@@ -22,6 +22,19 @@ const validator = {
     }
   },
 
+   //Maskify
+   maskify: function (creditCardNumber) {
+    //separar los últimos 4 digitos
+    let lastFourDigits = creditCardNumber.slice(-4);
+    //separar los digitos restantes
+    let firstDigits = creditCardNumber.slice(0 , -4);
+    //enmascarar los digitos restantes
+    let firstDigitsMask =  firstDigits.replace(/./g, "#");
+    //juntar todo
+    return firstDigitsMask + lastFourDigits;
+
+},
+
   //Validando Algoritmo de Luhn
   luhnValidation: function (ccnumber) {
     let twoDigits = []; // dos dígitos y pasan a tener uno de nuevo.
@@ -79,41 +92,20 @@ const validator = {
       validator.isANumber(creditCardNumber) === true &&
       validator.luhnValidation(creditCardNumber) === true
     ) {
-      alert("TC VÁLIDA");
+     //alert("TC VÁLIDA");
       return true;
     } else {
-      alert("TC NO VÁLIDA");
+     // alert("TC NO VÁLIDA");
       return false;
     }
-  },
 
-<<<<<<< HEAD
-
-
-  //Ouch! esto solo sirve para tarjetas de 16 dígitos
-  /*luhnValidation: function (values) {
-    for (let i = 0; i < values.length; i++) {
-      if (i % 2 === 0) {
-       //console.log(i); //tengo los índices pares, pero necesito el dígit(número) que está en esa posición: 
-      //console.log(values.charAt(i)); //valido que efectivamente estoy sacando los números que están en las posiciones pares
-      let evenNumber = values.charAt(i)*2;
-      //console.log(evenNumber);
-      }
-    }
-  }
-*/
-=======
-  maskify: function (creditCardNumber) {
-    let lastFourDigits = creditCardNumber.slice(-4);
-    let firstDigits = creditCardNumber.slice(0,-4);
-  },
     
-  //console.log(lastFourDigits);
->>>>>>> versionsr2
+  },
 
-
-  // ...
+  
 };
+
+
 
 export default validator;
 
