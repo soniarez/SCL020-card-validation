@@ -63,6 +63,8 @@ function payment()  {
 
 
 //FUNCIONES DESDE VALIDATOR   
+
+let input = document.getElementById("card-number").value;
 document.getElementById("card-number").value = validator.maskify(input);
 validator.stringLenght(input); //esta es la estructura para objetos
 validator.isANumber(input);
