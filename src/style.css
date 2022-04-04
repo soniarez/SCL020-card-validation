@@ -450,19 +450,44 @@ input {
 }
 
 .btn-payment {
+  background-color: #328989;
+  border: 2px solid #422800;
+  border-radius: 10px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
   width: 300px;
   height: 40px;
   left: 0px;
   top: 0px;
-  background: #328989;
-  border-radius: 10px;
   margin-top: 20px;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 17px;
   line-height: 21px;
-  color: #ffffff;
+  padding: 0 15px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.btn-payment:hover {
+  background-color: #fff;
+}
+
+.btn-payment:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .btn-payment {
+    min-width: 120px;
+    padding: 0 25px;
+  }
 }
 
 .confirmation-message {
@@ -482,6 +507,12 @@ input {
   color: #455255;
 }
 
+.error-message {
+  font-style: italic;
+  font-size: x-small;
+  color: #cc0000;
+}
+
 /*Para los íconos pero no pude ponerlos dentro del placeholder:
 .card-info .far,
 .cvv-info .fas{
@@ -494,3 +525,34 @@ input {
 */
 
 /*------------------------------------------------------FIN FORM-----------------------------------------------*/
+
+
+/*------------------------------------------------------INICIO ALERTS-----------------------------------------------*/
+.alertno {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  border-radius: 10px;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+/*------------------------------------------------------FIN ALERTS-----------------------------------------------*/
