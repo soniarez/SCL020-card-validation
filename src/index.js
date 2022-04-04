@@ -1,7 +1,5 @@
 import validator from './validator.js';
 
-
-
 document.getElementById("pay").onclick = payment;
 
 function payment()  {
@@ -65,14 +63,15 @@ function payment()  {
 
 
 //FUNCIONES DESDE VALIDATOR   
-let input = document.getElementById("card-number").value;
-validator.stringLenght(input); //esta es la estructura para llamar objetos
+document.getElementById("card-number").value = validator.maskify(input);
+validator.stringLenght(input); //esta es la estructura para objetos
 validator.isANumber(input);
 validator.luhnValidation(input);
+validator.isValid(input);
 
 let verification = validator.isValid(input);
 if (verification === true) {
-    /* swal({
+    /* swal(
         text: "¡Pago exitoso!",
         icon: "success",
       }); */
@@ -94,4 +93,5 @@ setTimeout(() => {
 242  
 
 //........
+
 }

@@ -22,6 +22,19 @@ const validator = {
     }
   },
 
+   //Maskify
+   maskify: function (creditCardNumber) {
+    //separar los últimos 4 digitos
+    let lastFourDigits = creditCardNumber.slice(-4);
+    //separar los digitos restantes
+    let firstDigits = creditCardNumber.slice(0 , -4);
+    //enmascarar los digitos restantes
+    let firstDigitsMask =  firstDigits.replace(/./g, "#");
+    //juntar todo
+    return firstDigitsMask + lastFourDigits;
+
+},
+
   //Validando Algoritmo de Luhn
   luhnValidation: function (ccnumber) {
     let twoDigits = []; // dos dígitos y pasan a tener uno de nuevo.
@@ -79,15 +92,19 @@ const validator = {
       validator.isANumber(creditCardNumber) === true &&
       validator.luhnValidation(creditCardNumber) === true
     ) {
-      //alert("TC VÁLIDA");
+     //alert("TC VÁLIDA");
       return true;
     } else {
-      //alert("TC NO VÁLIDA");
+     // alert("TC NO VÁLIDA");
       return false;
     }
+
+    
   },
 
-  // ...
+  
 };
+
+
 
 export default validator;
