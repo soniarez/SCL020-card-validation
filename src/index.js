@@ -3,18 +3,15 @@ import validator from './validator.js';
 /*Formula para enmascarar datos tarjeta
 $("input[name='expiry-data']").mask("00 / 00"); */
 
-document.getElementById("pay").onclick = payment;
+document.getElementById("pay"),onclick = payment;
 
 function payment() {
 let input = document.getElementById("card-number").value;
+document.getElementById("card-number").value = validator.maskify(input);
 validator.stringLenght(input); //esta es la estructura para objetos
 validator.isANumber(input);
 validator.luhnValidation(input);
-<<<<<<< HEAD
-=======
 validator.isValid(input);
->>>>>>> versionsr2
-validator.maskify(input);
 }
 
 
