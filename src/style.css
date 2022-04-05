@@ -528,31 +528,72 @@ input {
 
 
 /*------------------------------------------------------INICIO ALERTS-----------------------------------------------*/
-.alertno {
-  padding: 20px;
-  background-color: #f44336;
-  color: white;
-  border-radius: 10px;
-  position: fixed;
-  top: 10%;
+
+/* MODAL TARJETA INVÁLIDA */ 
+
+ .closebtn-no {
+  float: right;
+  font-size: 15px;
+  font-weight: bold;
+ }
+
+ .closebtn-no:hover {
+  cursor: pointer;
+ }
+
+ .modal {
+  display: none;
+ }
+ 
+ .modalcontent-no {
+  position: absolute;
+  font-family: Poppins;
+  font-size: 15px;
+  color:#ffebcd;
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  background-color: #EC7063;
+  width: 35%;
+  text-align: center;
+  margin: 2%;
+  top: 5%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: fit-content;
-}
+ }
 
-.closebtn {
-  margin-left: 15px;
-  color: white;
-  font-weight: bold;
+/* MODAL TARJETA VÁLIDA */
+
+ .closebtn-yes {
   float: right;
-  font-size: 22px;
-  line-height: 20px;
-  cursor: pointer;
-  transition: 0.3s;
-}
+  font-size: 15px;
+  font-weight: bold;
+ }
 
-.closebtn:hover {
-  color: black;
-}
+ .closebtn-yes:hover {
+  cursor: pointer;
+ }
+
+ .modal {
+  display: none;
+ }
+ 
+ .modalcontent-yes {
+  position: absolute;
+  font-family: Poppins;
+  font-size: 15px;
+  color:#741c3c;
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  background-color: #82E0AA;
+  width: 40%;
+  text-align: center;
+  margin: 2%;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ }
+
 
 /*------------------------------------------------------FIN ALERTS-----------------------------------------------*/
