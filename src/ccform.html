@@ -8,7 +8,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
@@ -23,53 +22,66 @@
     </header>
     <main></main>
 
-    <div class="alert" id="alertno">
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-        <strong>¡Error en tarjeta!</strong>Ingresa tus datos nuevamente por favor.
-      </div>
+    <!--Para modal tarjeta inválida-->
+    <div id="modal-no" class="modal">
+        <div class="modalcontent-no">
+            <span id="close_btn-no" class="closebtn-no">x</span>
+            <p>⛔ Tarjeta inválida. Revisa tus datos para continuar con la transacción.</p>
+        </div>
+    </div>
+
+    <!--Para modal tarjeta válida-->
+    <div id="modal-yes" class="modal">
+        <div class="modalcontent-yes">
+            <span id="close_btn-yes" class="closebtn-yes">x</span>
+            <p>¡Listo! estamos trabajando en tu pedido, pronto recibirás tu paquete sorpresa 💜</p>
+        </div>
+    </div> 
+
 
     <!--CREDIT CARD FORM-->
-        <div class="form" id="form">
-            <div class="form-header">
-                <img class="form-logo" src="img/logo.png">
-                <h3 class="user-message">¡Estás a un paso de completar tu
-                    suscripción!</h3>
+    <div class="form" id="form">
+        <div class="form-header">
+            <img class="form-logo" src="img/logo.png">
+            <h3 class="user-message">¡Estás a un paso de completar tu
+                suscripción!</h3>
         </div>
-            <div class="user-info1">
-                <label class="name-label">Nombre:</label>
-                <input required type="text" class="user-name" id="name" placeholder="Tu nombre">
-                <div class="error-message" id="error1"></div>
+        <div class="user-info1">
+            <label class="name-label">Nombre:</label>
+            <input required type="text" class="user-name" id="name" placeholder="Tu nombre">
+            <div class="error-message" id="error1"></div>
+        </div>
+        <div class="user-info2">
+            <label class="lastname-label">Apellido:</label>
+            <input required type="text" class="user-lastname" id="lastname" placeholder="Tu apellido">
+            <div class="error-message" id="error2"></div>
+        </div>
+        <div class="card-info">
+            <label class="label-card">Número Tarjeta de Crédito</label>
+            <input required type="text" class="card-number" id="card-number" placeholder="---- ---- ---- ----"
+                maxlength="16">
+            <!--//  <i class="far fa-credit-card"></i> -->
+            <div class="error-message" id="error3"></div>
+        </div>
+        <div class="security-info">
+            <div class="exp-info">
+                <label class="exp-label">Fecha Exp:</label>
+                <input required type="month" class="expiration-date" id="expiration-date" placeholder="--/--">
+                <div class="error-message" id="error4"></div>
             </div>
-            <div class="user-info2">
-                <label class="lastname-label">Apellido:</label>
-                <input required type="text" class="user-lastname" id="lastname" placeholder="Tu apellido">
-                <div class="error-message" id="error2"></div>
-            </div>
-            <div class="card-info">
-                <label class="label-card">Número Tarjeta de Crédito</label>
-                <input required type="text" class="card-number" id="card-number" placeholder="---- ---- ---- ----" maxlength="16">
-                <!--//  <i class="far fa-credit-card"></i> -->
-                <div class="error-message" id="error3"></div>
-            </div>
-            <div class="security-info">
-                <div class="exp-info">
-                    <label class="exp-label">Fecha Exp:</label>
-                    <input required type="month" class="expiration-date" id="expiration-date" placeholder="--/--">
-                    <div class="error-message" id="error4"></div>
-                </div>
-                <div class="cvv-info">
-                    <label class="code">CVV:</label>
-                    <input required type="text" class="cvv" id="cvv" placeholder="---" maxlength="3">
-                    <!--   <i class="fas fa-lock"></i>-->
-                    <div class="error-message" id="error5"></div>
-                </div>
-            </div>
-            <div class="payment">
-                <button class="btn-payment" role="button" type="submit" onclick="payment()" id="pay">Confirmar Pago</button>
-                <p class="confirmation-message">Estás confirmando que la información ingresada es válida</p>
+            <div class="cvv-info">
+                <label class="code">CVV:</label>
+                <input required type="text" class="cvv" id="cvv" placeholder="---" maxlength="3">
+                <!--   <i class="fas fa-lock"></i>-->
+                <div class="error-message" id="error5"></div>
             </div>
         </div>
-    
+        <div class="payment">
+            <button class="btn-payment" role="button" type="submit" onclick="payment()" id="pay">Confirmar Pago</button>
+            <p class="confirmation-message">Estás confirmando que la información ingresada es válida</p>
+        </div>
+    </div>
+
     <footer>
         <div class="footer-content">
             <p class="copyright">©Copyright 2022, Kitty reads SpA. Todos los derechos reservados</p>

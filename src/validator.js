@@ -20,7 +20,7 @@ const validator = {
     } else {
       return true;
     }
-  },
+  }, 
 
    //Maskify
    maskify: function (creditCardNumber) {
@@ -92,17 +92,11 @@ const validator = {
       validator.isANumber(creditCardNumber) === true &&
       validator.luhnValidation(creditCardNumber) === true
     ) {
-     //alert("TC VÁLIDA");
       return true;
     } else {
-     // alert("TC NO VÁLIDA");
       return false;
     }
-
-    
   },
-
-  
 };
 
 
