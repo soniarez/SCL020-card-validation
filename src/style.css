@@ -8,7 +8,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100vw;
-  height: auto;
+  height: 100vh;
   font-family: Poppins;
   background: #ffebcd;
 }
@@ -53,11 +53,12 @@ header {
 }
 
 .button-account {
+  position: absolute;
+  right: 25px;
   appearance: none;
   background-color: #ffffff;
   border: 1px solid rgba(27, 31, 35, 0.15);
   border-radius: 6px;
-  /*box-shadow: rgba(27, 31, 35, 0.04) 0 4px , rgba(255, 255, 255, 0.25) 0 1px 0 inset;*/
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
   color: #328989;
@@ -68,10 +69,8 @@ header {
   line-height: 20px;
   list-style: none;
   padding: 6px 16px;
-  position: absolute;
   width: 132px;
   height: 37px;
-  left: 1300px;
   top: 17px;
   transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
   user-select: none;
@@ -115,10 +114,9 @@ header {
     "product-delivery buttons";
   position: relative;
   margin: auto;
-
-  width: 1180px;
-  height: 697px;
-  top: 163px;
+  width: 900px;
+  height: 550px;
+  top: 100px;
   align-content: center;
   background: #ffffff;
   box-shadow: 5px 5px 15px rgba(69, 82, 85, 0.5);
@@ -130,9 +128,9 @@ header {
 }
 
 .book-image {
-  width: 586px;
-  height: 536px;
-  top: 290px;
+  width: 486px;
+  height: 436px;
+  margin-top: 20px;
 }
 
 .product-delivery {
@@ -141,6 +139,7 @@ header {
 }
 
 .product-title {
+  margin-top: 15px;
   grid-area: product-title;
   font-size: 23px;
   line-height: 54px;
@@ -164,7 +163,7 @@ header {
   appearance: none;
   background-color: #328989;
   border: 1px solid rgba(27, 31, 35, 0.15);
-  border-radius: 6px;
+  border-radius: 50%;
   box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
   width: 45px;
   height: 45px;
@@ -257,11 +256,15 @@ header {
 
 footer {
   position: absolute; /*para fijar el footer al final del página*, junto con los ajustes de body y html de height 100%*/
-  display: block;
-  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /*display: block;*/
+  width: 100vw;
   background: #b38c9c;
-  height: 81px;
-  top: 943px;
+  height: 50px;
+  /*padding-top: 40px;*/
+
 }
 
 .footer-content {
@@ -269,6 +272,7 @@ footer {
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin-top: 5px;
 }
 
 .copyright {
@@ -284,16 +288,20 @@ footer {
   align-items: center;
   justify-content: center;
   position: right;
-  /*float: left;*/
+  margin-top: 20px;
 }
 
 .instagram {
+  position: absolute;
+  right: 100px;
   list-style: none;
   margin: 5px;
   font-size: 20px; /*Para cambiar el tamaño de los íconos*/
 }
 
 .twitter {
+  position: absolute;
+  right: 60px;
   margin: 5px;
   font-size: 20px;
 }
@@ -307,7 +315,7 @@ footer {
   background: #fff;
   width: 360px;
   margin: 80px auto;
-  height: auto; /*718px;*/
+  height: 600px;
   padding: 16px 30px 30px;
   padding-top: 70px;
   border-radius: 20px;
@@ -315,7 +323,7 @@ footer {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
     0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
-  margin-top: 150px;
+  margin-top: 60px;
 }
 
 .form-header {
@@ -330,14 +338,14 @@ footer {
   max-width: 300px;
   margin: 80px auto;
   height: auto; /*166px;*/
-  top: 160px;
+  top: 100px;
   margin: 24px 0px;
 }
 
 .form-logo {
   position: absolute;
-  width: 92px;
-  height: 91px;
+  width: 82px;
+  height: 81px;
   top: 20px;
   align-items: center;
   text-align: center;
@@ -356,7 +364,7 @@ footer {
   line-height: 30px;
   text-align: center;
   color: #455255;
-  margin: 20px 0px;
+  margin: 10px;
 }
 
 .user-info1,
@@ -407,7 +415,7 @@ input {
 .user-lastname {
   height: 40px;
   left: 0px;
-  top: 34px;
+  top: 30px;
   padding: 13px 0px 13px 25px;
   width: 100%;
   border: 1px solid #e2e6ee;
