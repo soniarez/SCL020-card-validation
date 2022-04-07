@@ -85,6 +85,8 @@ function payment() {
   }
 
 }
+//FECHA
+
 
 //ESPACIO CADA 4 DÍGITOS
 document.getElementById("card-number").addEventListener("keyup", (e) => {
