@@ -33,3 +33,11 @@ A continuación, nos dividimos las partes HTML de la primera pantalla, para come
 Una vez que la primera pantalla nos pareció prensentable pasamos al JavaScript, y nuevamente dividimos las tareas. Al igual que el CSS, pensamos que JavaScript sería una etapa fácil de resolver.
 
 La verificación de la tarjeta quedó lista, pero fueron acompañadas de dos días de bloqueo, y en la actualidad una de las integrantes está bloqueada con la resolución del Maskify.
+
+Durante el segundo sprint, logramos la funcionalidad del proyecto mediante la validación de tarjeta de crédito con la función para Luhn y también el enmascaramiento mediante Maskify. En la segunda parte de sprint, nos enfocamos en los tests, con resultados exitosos; así como dar más énfasis en la parte visual y UX de nuestras pantallas. En esta línea, trabajamos en mejorar la distribución de los elementos en el grid, para que la pantalla fuese más armoniosa. Mejoramos la ubicación de íconos, elinamos la necesidad de hacer scroll, y alertas mediante modal box. 
+
+##Feedbacks recibidos
+En la instancia de primer Demo, recibimos el feedback del coach de reforzar en nuestra planificación, por lo que ya durante este strint hicimos una distribución por tareas más pequeñas en Trello. También Domi en una OH nos sugirió que podíamos trabajar con Modal Box para presentar nuestros mesanjes de alerta al usuario, ya que no quieríamos usar la alerta de default de Javascript. 
+
+También tuvimos una instancia de peer feedback, en la cual conversamos sobre los proyectos y nos hicimos sugerencias o tips mutuamente. 
+

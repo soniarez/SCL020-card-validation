@@ -78,10 +78,8 @@ const validator = {
     //console.log(sum); Ok
 
     if (sum % 10 === 0) {
-      //alert("Cumple Luhn");
       return true;
     } else {
-      //alert("No cumple Luhn");
       return false;
     }
   },
