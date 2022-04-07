@@ -542,17 +542,6 @@ input {
   color: #cc0000;
 }
 
-/*Para los íconos pero no pude ponerlos dentro del placeholder:
-.card-info .far,
-.cvv-info .fas{
-  position: arelative;
-  bottom: 12px;
-  left: 15px;
-  font-size: 20px;
-  color: #555555;
-}
-*/
-
 /*------------------------------------------------------FIN FORM-----------------------------------------------*/
 
 
